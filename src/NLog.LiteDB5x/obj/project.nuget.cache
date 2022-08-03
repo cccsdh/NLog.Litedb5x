@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "56UA0ItClIENOJq9jDxuLykh0+gUQ7QUgtFyrkjzgPWmN3q7gWYN6biXe7CDTJxt1z9Vg1aK6W2lpZrSMrB1Qw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dhunt.ANNARBOR\\source\\repos\\NLog.Litedb5x\\src\\NLog.LiteDB5x\\NLog.LiteDB5x.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\litedb\\5.0.12\\litedb.5.0.12.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog\\5.0.1\\nlog.5.0.1.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
