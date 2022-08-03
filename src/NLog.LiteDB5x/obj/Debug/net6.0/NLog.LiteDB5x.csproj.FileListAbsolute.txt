@@ -3,3 +3,15 @@ C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\NLog.LiteDB
 C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.AssemblyInfoInputs.cache
 C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.AssemblyInfo.cs
 C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.csproj.CoreCompileInputs.cache
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.csproj.AssemblyReference.cache
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.AssemblyInfoInputs.cache
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.AssemblyInfo.cs
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.csproj.CoreCompileInputs.cache
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\bin\Debug\net6.0\NLog.LiteDB5x.deps.json
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\bin\Debug\net6.0\NLog.LiteDB5x.dll
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\bin\Debug\net6.0\NLog.LiteDB5x.pdb
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.dll
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\refint\NLog.LiteDB5x.dll
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\NLog.LiteDB5x.pdb
+C:\Users\dhunt.ANNARBOR\source\repos\NLog.Litedb5x\src\NLog.LiteDB5x\obj\Debug\net6.0\ref\NLog.LiteDB5x.dll

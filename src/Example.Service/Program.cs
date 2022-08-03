@@ -1,10 +1,28 @@
-using Example.Service;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
+using NLog.Extensions.Logging;
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
+namespace Example.Service
+{
+    public class Program
     {
-        services.AddHostedService<Worker>();
-    })
-    .Build();
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
 
-await host.RunAsync();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddLogging(logger =>
+                    {
+                        logger.ClearProviders();
+                        logger.AddNLog("NLog.config");
+                    });
+                    services.AddHostedService<Worker>();
+                })
+            .UseWindowsService();
+    }
+}

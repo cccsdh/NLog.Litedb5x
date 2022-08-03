@@ -16,6 +16,7 @@ using NLog.Targets;
 using NLog.Config;
 using NLog.Targets.Wrappers;
 using NLog.LiteDB5x.Extensions;
+using Microsoft.Extensions.Configuration;
 using LiteDB;
 namespace NLog.LiteDB5x
 {
@@ -247,13 +248,15 @@ namespace NLog.LiteDB5x
 
             try
             {
-                var documents = logEvents.Select(e => CreateDocument(e.LogEvent));
-
-                var collection = GetCollection();
-                collection.Insert(documents);
+                string collectionName = CollectionName ?? "Log";
+                using (var db = new LiteDatabase(ConnectionString))
+                {
+                    db.GetCollection(collectionName).Insert(logEvents.Select(e => CreateDocument(e.LogEvent)));
+                }
 
                 foreach (var ev in logEvents)
                     ev.Continuation(null);
+
 
             }
             catch (Exception ex)
@@ -518,41 +521,22 @@ namespace NLog.LiteDB5x
             return new BsonValue(value);
         }
 
-        private ILiteCollection<BsonDocument> GetCollection()
-        {
-            // cache lite collection based on target name.
-            string key = string.Format("k|{0}|{1}|{2}",
-                ConnectionName ?? string.Empty,
-                ConnectionString ?? string.Empty,
-                CollectionName ?? string.Empty);
-
-            return _collectionCache.GetOrAdd(key, k =>
-            {
-                // create collection
-                var db = new LiteDatabase(ConnectionString);
-
-
-                string collectionName = CollectionName ?? "Log";
-
-                return db.GetCollection<BsonDocument>(collectionName);
-            });
-        }
-
-
         private static string GetConnectionString(string connectionName)
         {
             if (connectionName == null)
                 throw new ArgumentNullException(nameof(connectionName));
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile($"appsettings.json");
+            var config = configuration.Build();
+            var connectionString = config[connectionName];
 
-            var settings = ConfigurationManager.ConnectionStrings[connectionName];
-            if (settings == null)
+
+            if (string.IsNullOrWhiteSpace(connectionString))
                 throw new NLogConfigurationException($"No connection string named '{connectionName}' could be found in the application configuration file.");
 
-            string connectionString = settings.ConnectionString;
-            if (string.IsNullOrEmpty(connectionString))
-                throw new NLogConfigurationException($"The connection string '{connectionName}' in the application's configuration file does not contain the required connectionString attribute.");
 
-            return settings.ConnectionString;
+            return connectionString;
         }
 
     }

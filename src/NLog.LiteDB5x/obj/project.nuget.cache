@@ -1,19 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "56UA0ItClIENOJq9jDxuLykh0+gUQ7QUgtFyrkjzgPWmN3q7gWYN6biXe7CDTJxt1z9Vg1aK6W2lpZrSMrB1Qw==",
+  "dgSpecHash": "5RQoqz/t4I5Jr2KLuBVurIn1rEL3cNBgA4sJmvIoV5qdAXX+FoCe3/pD7y207QXRy31xt7PpYCrWXlmq5HqVPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dhunt.ANNARBOR\\source\\repos\\NLog.Litedb5x\\src\\NLog.LiteDB5x\\NLog.LiteDB5x.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\litedb\\5.0.12\\litedb.5.0.12.nupkg.sha512",
-    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\6.0.0\\microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog\\5.0.1\\nlog.5.0.1.nupkg.sha512",
-    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512"
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
