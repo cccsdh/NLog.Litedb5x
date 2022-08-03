@@ -16,4 +16,10 @@
     <PackageReference Include="NLog.Extensions.Logging" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
