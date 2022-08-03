@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,6 +7,8 @@
 	<Authors>DougHnutsPublishing</Authors>
 	  <Title>NLog LiteDB 5.x Target</Title>
 	  <Description>An NLog target for NoSql embedded database LiteDB (version 5.x)</Description>
+	  <PackageLicenseFile>License.txt</PackageLicenseFile>
+	  <PackageProjectUrl>https://github.com/cccsdh/NLog.Litedb5x</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,10 +18,8 @@
     <PackageReference Include="NLog.Extensions.Logging" Version="5.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="License.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="License.txt" Pack="true" PackagePath=""/>
+	</ItemGroup>
 
 </Project>

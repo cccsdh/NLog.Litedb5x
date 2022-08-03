@@ -445,7 +445,7 @@
           "lib/net5.0/NLog.Extensions.Logging.dll": {}
         }
       },
-      "NLog.LiteDB5x/2022.8.3.15": {
+      "NLog.LiteDB5x/2022.8.3.16": {
         "type": "package",
         "dependencies": {
           "LiteDB": "5.0.12",
@@ -1225,15 +1225,15 @@
         "nlog.extensions.logging.nuspec"
       ]
     },
-    "NLog.LiteDB5x/2022.8.3.15": {
-      "sha512": "Q9qbIKRzQatT/4WDV3FpO/Ure7w75XZ03y0PC0iEqsLqyIOwZv0xPuH07v6ju3Nxs7LFl+/PLldoWTZMKRS6Cw==",
+    "NLog.LiteDB5x/2022.8.3.16": {
+      "sha512": "riLYLMRiVTp8KpPJZWjL4zm5GocCbGszr5m6xfF7TM954F1/LaWPVMcFLfD3ZvVVbIqoG81psax0wvKxSysxng==",
       "type": "package",
-      "path": "nlog.litedb5x/2022.8.3.15",
+      "path": "nlog.litedb5x/2022.8.3.16",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/NLog.LiteDB5x.dll",
-        "nlog.litedb5x.2022.8.3.15.nupkg.sha512",
+        "nlog.litedb5x.2022.8.3.16.nupkg.sha512",
         "nlog.litedb5x.nuspec"
       ]
     },
@@ -1440,7 +1440,7 @@
       "Microsoft.Extensions.Hosting.WindowsServices >= 6.0.0",
       "Microsoft.Extensions.Logging >= 6.0.0",
       "NLog.Extensions.Logging >= 5.0.1",
-      "NLog.LiteDB5x >= 2022.8.3.15"
+      "NLog.LiteDB5x >= 2022.8.3.16"
     ]
   },
   "packageFolders": {
@@ -1512,7 +1512,7 @@
           },
           "NLog.LiteDB5x": {
             "target": "Package",
-            "version": "[2022.8.3.15, )"
+            "version": "[2022.8.3.16, )"
           }
         },
         "imports": [

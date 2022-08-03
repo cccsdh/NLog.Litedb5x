@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XyhfD8yr7EoyEePR2KSLiSGCa4M6pyktnpMFGZ6Hdxv/EQFWNGekL3VXWf+PjxtQr4ZqrlnrfK6+tNMQaUB/7A==",
+  "dgSpecHash": "hwcU3gd7c1qFZzDPl0ebuk9H3Rkmd5pa44IgW4m7Oe5DvP1hKCBUtEYtymEgGveBCSxS4rANltD47JZwLRQT4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\dhunt.ANNARBOR\\source\\repos\\NLog.Litedb5x\\src\\Example.Service\\Example.Service.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog\\5.0.1\\nlog.5.0.1.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512",
-    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.litedb5x\\2022.8.3.15\\nlog.litedb5x.2022.8.3.15.nupkg.sha512",
+    "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\nlog.litedb5x\\2022.8.3.16\\nlog.litedb5x.2022.8.3.16.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\dhunt.ANNARBOR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

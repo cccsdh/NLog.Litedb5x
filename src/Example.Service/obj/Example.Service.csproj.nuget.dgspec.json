@@ -68,7 +68,7 @@
             },
             "NLog.LiteDB5x": {
               "target": "Package",
-              "version": "[2022.8.3.15, )"
+              "version": "[2022.8.3.16, )"
             }
           },
           "imports": [
