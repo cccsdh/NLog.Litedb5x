@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<Authors>DougHnutsPublishing</Authors>
+	  <Title>NLog LiteDB 5.x Target</Title>
+	  <Description>An NLog target for NoSql embedded database LiteDB (version 5.x)</Description>
   </PropertyGroup>
 
   <ItemGroup>
