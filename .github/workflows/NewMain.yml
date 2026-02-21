@@ -23,15 +23,6 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Verify repo layout (diagnostics)
-        shell: bash
-        run: |
-          pwd
-          ls -la
-          ls -la src
-          # Fail fast if the solution isn't exactly where we expect (and with correct casing)
-          test -f "src/master.sln"
-
       - name: Restore
         run: dotnet restore ./src/master.sln
 
