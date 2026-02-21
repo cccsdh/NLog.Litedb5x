@@ -23,13 +23,17 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore master.sln
+        run: dotnet restore
 
       - name: Build
-        run: dotnet build master.sln --configuration Release --no-restore
+        run: |
+          dotnet build NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --no-restore
+          dotnet build Example.Service/Example.Service.csproj --configuration Release --no-restore
+          dotnet build NLog.LiteDB5x.Specs/NLog.LiteDB5x.Specs.csproj --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test master.sln --configuration Release --no-build --verbosity normal
+        run: |
+          dotnet test NLog.LiteDB5x.Specs/NLog.LiteDB5x.Specs.csproj --configuration Release --no-build --verbosity normal
 
       - name: Pack NLog.LiteDB5x
         run: dotnet pack NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build
