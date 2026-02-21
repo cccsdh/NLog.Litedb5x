@@ -11,6 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,17 +23,26 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Verify repo layout (diagnostics)
+        shell: bash
+        run: |
+          pwd
+          ls -la
+          ls -la src
+          # Fail fast if the solution isn't exactly where we expect (and with correct casing)
+          test -f "src/master.sln"
+
       - name: Restore
-        run: dotnet restore src/master.sln
+        run: dotnet restore ./src/master.sln
 
       - name: Build
-        run: dotnet build src/master.sln --configuration Release --no-restore
+        run: dotnet build ./src/master.sln --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test src/master.sln --configuration Release --no-build --verbosity normal
+        run: dotnet test ./src/master.sln --configuration Release --no-build --verbosity normal
 
       - name: Pack NLog.LiteDB5x
-        run: dotnet pack NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build
+        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build
 
       - name: Push NuGet package to nuget.org
         if: github.ref == 'refs/heads/main'
@@ -40,4 +50,4 @@ jobs:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
           echo "Publishing packages to nuget.org"
-          dotnet nuget push ./artifacts/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate
+          dotnet nuget push ./artifacts/*.nupkg --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
