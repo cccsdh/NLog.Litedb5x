@@ -1,18 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-Example.Service-3A858B96-02D4-461F-923F-6295591D7243</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="5.0.1" />
-    <PackageReference Include="NLog.LiteDB5x" Version="2022.8.3.16" />
+    <!-- Microsoft.Extensions packages: add explicit Host/WindowsServices packages compatible with .NET 8 -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="6.0.1" />
+    <!-- Use the local project for the NLog.LiteDB5x implementation in this workspace -->
+    <ProjectReference Include="..\NLog.LiteDB5x\NLog.LiteDB5x.csproj" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,43 @@
+name: CI - build, test, pack and publish
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore master.sln
+
+      - name: Build
+        run: dotnet build master.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test master.sln --configuration Release --no-build --verbosity normal
+
+      - name: Pack NLog.LiteDB5x
+        run: dotnet pack NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build
+
+      - name: Push NuGet package to nuget.org
+        if: github.ref == 'refs/heads/main'
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          echo "Publishing packages to nuget.org"
+          dotnet nuget push ./artifacts/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate

@@ -3,7 +3,7 @@
 
 NLog target for the LiteDB 5.x database
 
-[![Build Status](https://doughnutspublishing.visualstudio.com/NLog.LiteDB5.x/_apis/build/status/NLog.LiteDB5.x/NLog.LiteDB5.x?branchName=main)](https://doughnutspublishing.visualstudio.com/NLog.LiteDB5.x/_build/latest?definitionId=6&branchName=main)
+[![CI](https://github.com/cccsdh/NLog.Litedb5x/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/cccsdh/NLog.Litedb5x/actions/workflows/ci.yml)
 
 
 ## Configuration Syntax
