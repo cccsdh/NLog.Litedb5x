@@ -31,8 +31,16 @@ jobs:
       - name: Test
         run: dotnet test ./src/Master.sln --configuration Release --no-build --verbosity normal
 
+      - name: Set package version
+        id: set_version
+        run: |
+          DATE=$(date -u +%Y.%m.%d)
+          VERSION="${DATE}.${GITHUB_RUN_NUMBER}"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Package version: $VERSION"
+
       - name: Pack NLog.LiteDB5x
-        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build
+        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build -p:PackageVersion=${{ env.VERSION }}
 
       - name: Push NuGet package to nuget.org
         if: github.ref == 'refs/heads/main'
