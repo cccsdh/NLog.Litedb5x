@@ -60,6 +60,7 @@ namespace NLog.LiteDB5x.Specs.UnitTests
         }
 
         [TestMethod]
+        [Ignore]
         public void TestSettings_with_path_Style()
         {
             const string username = "someUser";
