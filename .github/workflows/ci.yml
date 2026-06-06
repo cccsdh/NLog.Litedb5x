@@ -17,10 +17,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup .NET
+      - name: Setup .NET (8 + 10)
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: |
+            8.0.x
+            10.0.x
 
       - name: Restore
         run: dotnet restore ./src/Master.sln
@@ -39,8 +41,23 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "Package version: $VERSION"
 
-      - name: Pack NLog.LiteDB5x
-        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj --configuration Release --output ./artifacts --no-build -p:PackageVersion=${{ env.VERSION }}
+      # Pack .NET 8 version
+      - name: Pack NLog.LiteDB5x (.NET 8)
+        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj \
+              --configuration Release \
+              --output ./artifacts \
+              --no-build \
+              -p:TargetFramework=net8.0 \
+              -p:PackageVersion=${{ env.VERSION }}
+
+      # Pack .NET 10 version
+      - name: Pack NLog.LiteDB5x (.NET 10)
+        run: dotnet pack ./src/NLog.LiteDB5x/NLog.LiteDB5x.csproj \
+              --configuration Release \
+              --output ./artifacts \
+              --no-build \
+              -p:TargetFramework=net10.0 \
+              -p:PackageVersion=${{ env.VERSION }}
 
       - name: Push NuGet package to nuget.org
         if: github.ref == 'refs/heads/main'
@@ -48,4 +65,7 @@ jobs:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
           echo "Publishing packages to nuget.org"
-          dotnet nuget push ./artifacts/*.nupkg --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          dotnet nuget push ./artifacts/*.nupkg \
+            --api-key "$NUGET_API_KEY" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
